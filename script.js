@@ -1,7 +1,7 @@
 /* ===== PENGATURAN ===== */
 const CONFIG = {
   // Tempel URL Web App dari Google Apps Script (lihat Code.gs & panduan)
-  SCRIPT_URL: '',
+  SCRIPT_URL: 'https://script.google.com/macros/s/AKfycbzyE5B7Ejbnga59JG2DNuMnrmK-v-e5iR89mFELc9S87g6oep7lpifVOt579167FD0vYA/exec',
   DURATION_MIN: 60,
   SHOW_SCORE: true // false = siswa tidak melihat nilai di layar
 };
