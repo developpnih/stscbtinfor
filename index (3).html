@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>CBT UTS Informatika Kelas X - SMK Muhammadiyah Bojong</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="bar">
+  <div class="brand"><strong>SMK Muhammadiyah Bojong</strong><span>UTS Informatika · Kelas X</span></div>
+  <div id="timer" class="timer" hidden>60:00</div>
+</header>
+
+<main>
+  <section id="login" class="card narrow">
+    <h1>Ujian Tengah Semester Informatika</h1>
+    <p class="muted">50 soal pilihan ganda · 60 menit · Nilai = jumlah benar × 2</p>
+    <label>Nama lengkap<input id="nama" autocomplete="off"></label>
+    <label>Kelas
+      <select id="kelas"><option>X TSM</option><option>X PSPT</option></select>
+    </label>
+    <label>No. absen<input id="absen" inputmode="numeric" autocomplete="off"></label>
+    <p id="loginErr" class="err" role="alert"></p>
+    <button id="startBtn" class="btn primary block">Mulai ujian</button>
+  </section>
+
+  <section id="exam" hidden>
+    <div class="layout">
+      <article class="card">
+        <div class="qhead">
+          <span id="qno"></span>
+          <button id="markBtn" class="btn ghost">Tandai ragu</button>
+        </div>
+        <p id="qtext" class="qtext"></p>
+        <div id="opts" class="opts"></div>
+        <div class="actions">
+          <button id="prev" class="btn">Sebelumnya</button>
+          <button id="next" class="btn primary">Selanjutnya</button>
+        </div>
+      </article>
+      <aside class="card side">
+        <p id="progress" class="muted"></p>
+        <div id="grid" class="grid"></div>
+        <p class="legend"><i class="k ans"></i>Terjawab <i class="k mark"></i>Ragu <i class="k"></i>Kosong</p>
+        <button id="finishBtn" class="btn primary block">Selesai dan kirim</button>
+      </aside>
+    </div>
+  </section>
+
+  <section id="result" class="card narrow" hidden>
+    <h1 id="rName"></h1>
+    <p id="rClass" class="muted"></p>
+    <div id="rScore" class="score"></div>
+    <p id="rDetail"></p>
+    <p id="sendStatus" class="status" role="status"></p>
+    <button id="retry" class="btn block" hidden>Kirim ulang nilai</button>
+    <button id="reset" class="btn ghost block" hidden>Selesai, ganti peserta</button>
+  </section>
+</main>
+
+<div id="modal" class="modal" hidden>
+  <div class="dialog">
+    <h2>Kirim jawaban sekarang?</h2>
+    <p id="modalMsg"></p>
+    <div class="actions">
+      <button id="cancel" class="btn">Kembali</button>
+      <button id="confirm" class="btn primary">Ya, kirim</button>
+    </div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
